@@ -1,5 +1,5 @@
-# Getting raw data from multiple MPU-6050s interfaced with Arduino
-Taking the steps below, you can get raw values from your MPU-6050 modules. These raw value include:
+# Getting raw data from multiple MPU-6050s with Arduino
+Taking the steps below, you can get raw values from your MPU-6050s. These raw value include:
 
 - Accelerometer output towards x, y and z axes
 - Gyroscope output towards x, y and z axes
