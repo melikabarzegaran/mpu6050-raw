@@ -18,6 +18,63 @@
  */
 
 /*
+ * title:
+ *      Getting raw data from multiple MPU-6050s with Arduino
+ *
+ * description:
+ *      Returns raw data (accelerometer output towards x, y, and z axes and gyroscope output towards x, y, and z
+ *      axes) from multiple MPU-6050s.
+ *
+ *      The sketch uses MPU-6050 library, written by Jeff Rowberg. That MPU-6050 library, uses the I2C serial
+ *      communication protocol library, which is also written by Jeff Rowberg. Finally, the I2C serial communication
+ *      protocol library uses the official Arduino I2C library, called Wire.
+ *
+ *      The link to the source code of MPU-6050 library, written by Jeff Rowberg, is here:
+ *          https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050
+ *
+ *      The link to the source code of I2C serial protocol library, also written by Jeff Rowberg, is here:
+ *          https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/I2Cdev
+ *
+ *      The reference to the official Arduino I2C library, called Wire, can be found here:
+ *          https://www.arduino.cc/en/reference/wire
+ *
+ * configuration:
+ *      +-----------------------+-------------------------------+
+ *      | Arduino Uno board pin | GY-521 break-out board #1 pin |
+ *      +-----------------------+-------------------------------+
+ *      |          VCC          |              VCC              |
+ *      +-----------------------+-------------------------------+
+ *      |          GND          |              GND              |
+ *      +-----------------------+-------------------------------+
+ *      |           A5          |              SCL              |
+ *      +-----------------------+-------------------------------+
+ *      |           A4          |              SDA              |
+ *      +-----------------------+-------------------------------+
+ *      |          AD0          |              D13              |
+ *      +-----------------------+-------------------------------+
+ *
+ *      +-----------------------+-------------------------------+
+ *      | Arduino Uno board pin | GY-521 break-out board #2 pin |
+ *      +-----------------------+-------------------------------+
+ *      |          VCC          |              VCC              |
+ *      +-----------------------+-------------------------------+
+ *      |          GND          |              GND              |
+ *      +-----------------------+-------------------------------+
+ *      |           A5          |              SCL              |
+ *      +-----------------------+-------------------------------+
+ *      |           A4          |              SDA              |
+ *      +-----------------------+-------------------------------+
+ *      |          AD0          |              D12              |
+ *      +-----------------------+-------------------------------+
+ *
+ * author:
+ *      Melika Barzegaran <melika.barzegaran.hosseini@gmail.com>
+ *
+ * version:
+ *      1.0.0
+ */
+
+/*
  * Add MPU-6050 library, written by Jeff Rowberg <jeff@rowberg.net>.
  * Link to the library: https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050
  */
